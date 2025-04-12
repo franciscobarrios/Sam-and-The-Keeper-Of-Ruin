@@ -1,0 +1,54 @@
+.button {
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    font-size: 28px;
+    color: rgb(180, 180, 180);
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-text-align: middle-left;
+    white-space: nowrap;
+    -unity-font-style: bold;
+    scale: 1 1;
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=7ec77575c9e7f1f4aa0418be321e6896&type=3#NotInter-Regular");
+    text-overflow: ellipsis;
+    opacity: 1;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.button:hover {
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-text-align: middle-left;
+    white-space: nowrap;
+    -unity-font-style: bold;
+    scale: 1 1;
+    transition-property: color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+.button:active {
+    transition-property: color;
+    scale: 0.99 0.99;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    color: rgb(128, 128, 128);
+    font-size: 28px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-left;
+}

@@ -1,0 +1,90 @@
+.inventory-panel {
+    flex-direction: column;
+    background-color: rgb(97, 58, 40);
+    align-items: center;
+    margin: 8px;
+    padding: 4px;
+    border-radius: 16px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    height: 750px;
+}
+
+.inventory-title {
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    text-overflow: ellipsis;
+    font-size: 24px;
+}
+
+.inventory-description-txt {
+    font-size: 20px;
+    -unity-text-align: upper-left;
+    white-space: normal;
+    -unity-font-style: normal;
+}
+
+#inventory-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 310px;
+    height: auto;
+    background-image: none;
+}
+
+.inventory-slot:hover {
+    width: 102px;
+    height: 102px;
+    font-size: 14px;
+    -unity-text-align: lower-center;
+    background-color: rgb(55, 40, 28);
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-radius: 8px;
+    background-image: url("project://database/Assets/Imports/Icons/f.PNG?fileID=2800000&guid=ed1074391f139544d941ae0870937dc0&type=3#f");
+    -unity-background-image-tint-color: rgb(219, 219, 219);
+    justify-content: flex-end;
+}
+
+.inventory-slot {
+    width: 102px;
+    height: 102px;
+    font-size: 14px;
+    -unity-text-align: lower-center;
+    background-color: rgb(55, 40, 28);
+    -unity-font-style: normal;
+    color: rgb(255, 255, 255);
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-radius: 8px;
+    background-image: url("project://database/Assets/Imports/Icons/f.PNG?fileID=2800000&guid=ed1074391f139544d941ae0870937dc0&type=3#f");
+    -unity-background-image-tint-color: rgb(137, 137, 137);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    justify-content: flex-end;
+}
+
+.item-icon {
+    background-image: none;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.item-quantity {
+    font-size: 14px;
+    -unity-font-style: bold;
+}
