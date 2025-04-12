@@ -5,7 +5,9 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
-    public  List<InventorySlot> Container = new();
+
+    [SerializeField]
+    public Dictionary<int, ItemData> Items = new();
 
     private void Awake()
     {
@@ -14,28 +16,35 @@ public class Inventory : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public void AddItem(ItemData item, int amount)
+
+    public void AddItem(ItemData item, int quantity)
     {
-        bool hasItem = false;
-
-        for (int i = 0; i < Container.Count; i++)
+        if (Items.ContainsKey(item.id)) // Assuming ItemData has an itemID
         {
-            if (Container[i].item == item)
-            {
-                Container[i].AddAmount(amount);
-                hasItem = true;
-                break;
-            }
+            Items[item.id].quantity += quantity; // Add to existing quantity
         }
-
-        if (!hasItem)
+        else
         {
-            Container.Add(new InventorySlot(item, amount));
+            ItemData newItem = Instantiate(item); // Create a new instance in the inventory
+            newItem.quantity = quantity;
+            Items.Add(newItem.id, newItem); // Add the item
         }
     }
 
-    public List<InventorySlot> GetItems()
+    public void RemoveItem(ItemData item, int quantity)
     {
-        return Container;
+        if (Items.ContainsKey(item.id))
+        {
+            Items[item.id].quantity -= quantity;
+            if (Items[item.id].quantity <= 0)
+            {
+                Items.Remove(item.id); // Remove if quantity is zero
+            }
+        }
+    }
+
+    public bool HasItem(ItemData item, int quantity)
+    {
+        return Items.ContainsKey(item.id) && Items[item.id].quantity >= quantity;
     }
 }

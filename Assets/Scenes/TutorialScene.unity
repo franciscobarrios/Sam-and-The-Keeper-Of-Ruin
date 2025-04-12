@@ -11016,6 +11016,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6062882672492231583, guid: 90666b7805d9d2b4d9a9a831ddfb5a16, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062882672492231583, guid: 90666b7805d9d2b4d9a9a831ddfb5a16, type: 3}
       propertyPath: items.Array.size
       value: 1
       objectReference: {fileID: 0}

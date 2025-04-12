@@ -1682,7 +1682,7 @@ GameObject:
   - component: {fileID: 1993620368010226030}
   - component: {fileID: 5749945787414906004}
   - component: {fileID: 7305024573126286398}
-  - component: {fileID: 6062882672492231583}
+  - component: {fileID: 6626165203149723396}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1852,7 +1852,7 @@ MonoBehaviour:
   walkingSpeedThreshold: 0.1
   idleSpeedThreshold: 0.05
   _playerISOController: {fileID: 5749945787414906004}
---- !u!114 &6062882672492231583
+--- !u!114 &6626165203149723396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1864,8 +1864,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f69fbb845829401e860aedabba5dc1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 0}
 --- !u!1 &6626627256245767261
 GameObject:
   m_ObjectHideFlags: 0

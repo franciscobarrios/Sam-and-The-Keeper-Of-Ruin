@@ -40,9 +40,7 @@ namespace Characters.Scripts
         private IEnumerator GatheringCoroutine()
         {
             yield return new WaitForSeconds(5f);
-
-          
-            //Inventory.instance.AddItem();
+          //Inventory.instance.AddItem();
             _parentState.OnSubStateCompleted();
         }
     }

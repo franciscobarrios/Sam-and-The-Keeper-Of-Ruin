@@ -50,47 +50,47 @@ public class InventoryUIController : MonoBehaviour
         _inventoryGrid.Clear();
         _itemImage.Clear();
 
-        for (int i = 0; i < Inventory.instance.GetItems().Count; i++)
+        for (int i = 0; i < Inventory.instance.Items.Count; i++)
         {
-            InventorySlot item = Inventory.instance.GetItems()[i];
+            ItemData item = Inventory.instance.Items[i];
             VisualElement slot = CreateInventorySlot(item);
             _inventoryGrid.Add(slot);
         }
     }
 
-    private VisualElement CreateInventorySlot(InventorySlot slotItem)
+    private VisualElement CreateInventorySlot(ItemData item)
     {
         VisualElement slot = new VisualElement();
         slot.AddToClassList("inventory-slot"); // Apply the USS class
 
         Image itemIcon = new Image();
         itemIcon.AddToClassList("item-icon");
-        itemIcon.sprite = slotItem.item.icon;
+        itemIcon.sprite = item.icon;
         slot.Add(itemIcon);
 
         Label itemQuantity = new Label();
         itemQuantity.AddToClassList("item-quantity");
-        itemQuantity.text = slotItem.item.isStackable ? slotItem.amount.ToString() : "";
+        itemQuantity.text = item.isStackable ? item.quantity.ToString() : "";
         slot.Add(itemQuantity);
 
-        slot.RegisterCallback<ClickEvent>((evt) => { DisplayItemDetails(slotItem); });
+        slot.RegisterCallback<ClickEvent>((evt) => { DisplayItemDetails(item); });
 
         return slot;
     }
 
-    private void DisplayItemDetails(InventorySlot item)
+    private void DisplayItemDetails(ItemData item)
     {
         _itemImage.Clear();
         Image itemImage = new Image();
-        itemImage.sprite = item.item.icon;
+        itemImage.sprite = item.icon;
         _itemImage.Add(itemImage);
         _itemNameLabel.text = item.name;
-        _itemTypeLabel.text = item.item.type.ToString();
-        _itemDescriptionLabel.text = item.item.description;
+        _itemTypeLabel.text = item.type.ToString();
+        _itemDescriptionLabel.text = item.description;
     }
 
     private bool InventoryHasItems()
     {
-        return (Inventory.instance.GetItems().Count > 0);
+        return (Inventory.instance.Items.Count > 0);
     }
 }
